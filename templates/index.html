@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Web Data Collector</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="headTitle">Data Collector</h1>
+      <h3 class="description">
+        Please fill the entries to get population statestics on height
+      </h3>
+      <form action="{{url_for('success')}}" method="POST">
+        <input
+          class="inputfield"
+          type="email"
+          title="Your email will be safe with us"
+          placeholder="Enter your email address"
+          name="email_add"
+          required="required"
+        /><br />
+        <input
+          class="inputfield"
+          type="text"
+          title="Your data will be safe with us"
+          placeholder="Enter your height in cm"
+          name="height"
+          required="required"
+        /><br />
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
