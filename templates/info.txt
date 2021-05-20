@@ -1,3 +1,32 @@
-pip install flask
-pip install psycopg2
-pip install Flask-SQLAlchemy
+#Creating table for the first time
+from script import db
+db.create_all()
+
+####Deploying to heroku
+#creating app
+heroku create app_name
+
+#creating database in heroku toolbelt
+heroku addons:create heroku-postgresql:hobby-dev --app app_name
+
+#Getting database url
+heroku config --app app_name
+#copy database url
+
+#Add below line at the end
+sslmode+require
+
+#Create requirements.txt
+
+#Pushing to heroku
+heroku git:remote --app app_name
+git push heroku master
+
+#Creating tables
+heroku run bash
+heroku run python 
+from app inport db
+db.create_all()
+
+#Woring with database
+heroku pg:psql --app app_name

@@ -13,6 +13,7 @@
       <h3 class="description">
         Please fill the entries to get population statestics on height
       </h3>
+      <div class="message">{{text | safe}}</div>
       <form action="{{url_for('success')}}" method="POST">
         <input
           class="inputfield"
@@ -32,6 +33,7 @@
         /><br />
         <button class="btn" type="submit">Submit</button>
       </form>
+      {% include btn ignore missing %}
     </div>
   </body>
 </html>

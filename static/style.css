@@ -43,3 +43,7 @@ body{
     border-radius: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.message{
+    text-align: center;
+    font-size: 30px;
+}
