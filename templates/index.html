@@ -33,7 +33,7 @@
         /><br />
         <button class="btn" type="submit">Submit</button>
       </form>
-      {% include btn ignore missing %}
+      {% if btn is defined %} {% include btn ignore missing %} {% endif %}
     </div>
   </body>
 </html>
